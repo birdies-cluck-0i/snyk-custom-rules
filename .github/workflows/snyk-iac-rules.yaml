@@ -1,0 +1,20 @@
+name: Snyk IaC Rules Test
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  snyk-iac-rules-test:
+    name: Run Snyk IaC Rules Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies and run Snyk IaC Rules Test
+      run: |
+        npm install -g snyk-iac-rules
+        snyk-iac-rules test -v
