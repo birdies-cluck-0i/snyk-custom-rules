@@ -20,6 +20,13 @@ test_CUSTOM_RULE_1 {
 		"want_msgs": ["input.spec.replicas"],
 		"fixture": "denied_max.yaml",
 	},
+	{
+		"want_msgs": ["input.spec.replicas"],
+		"fixture": "denied_min.yaml",
+	},	{
+		"want_msgs": ["input.spec.replicas"],
+		"fixture": "denied_max_6.yaml",
+	},
 	]
 
 	test_cases := array.concat(allowed_test_cases, denied_test_cases)
